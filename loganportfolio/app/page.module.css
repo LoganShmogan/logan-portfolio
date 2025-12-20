@@ -1,0 +1,516 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #aec5b0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Header / Landing Section */
+.landing {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 20px;
+    background: rgba(0, 78, 7, 0.29);
+}
+
+.header {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.titleBox {
+    background: #004e07;
+    padding: 30px 50px;
+    border-radius: 8px;
+}
+
+.titleBox h1 {
+    color: white;
+    margin: 0;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+}
+
+.navItem {
+    background: #004e07;
+    color: white;
+    padding: 30px 40px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navItem:hover {
+    background: #006008;
+    transform: translateY(-2px);
+}
+
+.aboutSection {
+    max-width: 1920px;
+    margin: 100px auto 50px;
+    padding: 0 50px;
+}
+
+.sectionTitle {
+    background: #004e07;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 8px;
+    margin: 0 auto 60px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.infoCards {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.infoCard,
+.infoCardReverse {
+    background: #004e07;
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.infoCardReverse {
+    flex-direction: row-reverse;
+}
+
+.cardImage {
+    min-width: 350px;
+    height: 300px;
+    background: rgba(0, 115, 10, 0.8);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.cardContent {
+    color: white;
+}
+
+.cardContent h3 {
+    font-size: 36px;
+    margin: 0 0 20px 0;
+}
+
+.cardContent p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Projects Section */
+.projectsSection {
+    position: relative;
+    padding: 100px 20px;
+    background: #aec5b0;
+}
+
+.projectGrid {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.projectCard {
+    background: rgba(0, 78, 7, 0.8);
+    border-radius: 8px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 78, 7, 0.95);
+}
+
+.projectInner {
+    background: #004e07;
+    width: 100%;
+    height: 285px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectInner span {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.githubSection {
+    background: #004e07;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.githubText {
+    color: white;
+    font-size: 42px;
+    margin: 0 0 20px 0;
+    font-weight: bold;
+}
+
+.githubLink {
+    color: white;
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Contact Section */
+.contactSection {
+    padding: 100px 20px;
+    background: #aec5b0;
+}
+
+.contactCards {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.contactCard {
+    background: #004e07;
+    padding: 40px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+.contactIcon {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 30px;
+    background: rgba(0, 115, 10, 0.8);
+    border-radius: 8px;
+}
+
+.contactCard h3 {
+    font-size: 36px;
+    margin: 0 0 20px 0;
+}
+
+.contactInfo {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.contactHours {
+    font-size: 20px;
+    margin: 10px 0;
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background: #004e07;
+    padding: 60px 50px;
+    margin: 0 20px;
+    border-radius: 8px;
+}
+
+.footerColumns {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
+}
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footerColumn h4 {
+    color: white;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+}
+
+.footerColumn a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: opacity 0.3s ease;
+}
+
+.footerColumn a:hover {
+    opacity: 0.8;
+}
+
+/* Decorative Elements */
+.decorativeArt,
+.decorativeArtRight {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.polygon {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    opacity: 0.6;
+}
+
+.polygon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.artText {
+    position: absolute;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    transform: rotate(-15deg);
+    opacity: 0.8;
+}
+
+.largeDecorativeArt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.vectorArt {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .titleBox h1 {
+        font-size: 36px;
+    }
+
+    .navItem {
+        padding: 20px 30px;
+        font-size: 16px;
+    }
+
+    .sectionTitle {
+        font-size: 36px;
+        padding: 30px;
+    }
+
+    .projectGrid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing {
+        padding: 30px 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    .titleBox {
+        width: 100%;
+        text-align: center;
+        padding: 20px 30px;
+    }
+
+    .titleBox h1 {
+        font-size: 28px;
+    }
+
+    .nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navItem {
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+
+    .sectionTitle {
+        font-size: 28px;
+        padding: 20px;
+    }
+
+    .infoCard,
+    .infoCardReverse {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .cardImage {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .cardContent h3 {
+        font-size: 24px;
+    }
+
+    .cardContent p {
+        font-size: 16px;
+    }
+
+    .projectGrid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        gap: 20px;
+    }
+
+    .projectCard {
+        min-height: 250px;
+    }
+
+    .projectInner {
+        height: 200px;
+    }
+
+    .projectInner span {
+        font-size: 24px;
+    }
+
+    .githubText {
+        font-size: 28px;
+    }
+
+    .githubLink {
+        font-size: 20px;
+        word-break: break-all;
+    }
+
+    .contactCards {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .contactIcon {
+        width: 200px;
+        height: 200px;
+    }
+
+    .contactCard h3 {
+        font-size: 24px;
+    }
+
+    .contactInfo {
+        font-size: 18px;
+    }
+
+    .contactHours {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 40px 20px;
+        margin: 0 15px;
+    }
+
+    .footerColumns {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footerColumn h4 {
+        font-size: 22px;
+    }
+
+    .footerColumn a {
+        font-size: 16px;
+    }
+
+    .polygon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .artText {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleBox h1 {
+        font-size: 24px;
+    }
+
+    .navItem {
+        font-size: 12px;
+        padding: 12px 15px;
+    }
+
+    .sectionTitle {
+        font-size: 22px;
+    }
+
+    .githubSection {
+        padding: 30px 20px;
+    }
+
+    .polygon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .artText {
+        font-size: 16px;
+    }
+}
