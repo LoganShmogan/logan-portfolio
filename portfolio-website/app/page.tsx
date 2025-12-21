@@ -9,11 +9,11 @@ emailjs.init("pq07HrJkk-lgFXmi1");
 
 export default function Home() {
   // Refs for navigation
-  const homeRef = useRef<HTMLDivElement>(null);
-  const aboutRef = useRef<HTMLDivElement>(null);
-  const workRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
-  const businessRef = useRef<HTMLDivElement>(null);
+  const homeRef = useRef<HTMLElement>(null);
+  const aboutRef = useRef<HTMLElement>(null);
+  const workRef = useRef<HTMLElement>(null);
+  const contactRef = useRef<HTMLElement>(null);
+  const businessRef = useRef<HTMLElement>(null);
 
   // State for contact form
   const [formData, setFormData] = useState({
@@ -27,7 +27,7 @@ export default function Home() {
   );
 
   // Navigation scroll function
-  const scrollToSection = (ref: RefObject<HTMLDivElement>) => {
+  const scrollToSection = (ref: RefObject<HTMLElement>) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -126,36 +126,51 @@ export default function Home() {
       {/* Navigation Bar */}
       <nav className={styles.navbar}>
         <div className={styles.navContent}>
-          <div className={styles.logo} onClick={() => scrollToSection(homeRef)}>
+          <div
+            className={styles.logo}
+            onClick={() =>
+              scrollToSection(homeRef as RefObject<HTMLDivElement>)
+            }
+          >
             <h1>Logan Young</h1>
           </div>
           <div className={styles.navLinks}>
             <button
-              onClick={() => scrollToSection(homeRef)}
+              onClick={() =>
+                scrollToSection(homeRef as RefObject<HTMLDivElement>)
+              }
               className={styles.navLink}
             >
               Home
             </button>
             <button
-              onClick={() => scrollToSection(aboutRef)}
+              onClick={() =>
+                scrollToSection(aboutRef as RefObject<HTMLDivElement>)
+              }
               className={styles.navLink}
             >
               About
             </button>
             <button
-              onClick={() => scrollToSection(businessRef)}
+              onClick={() =>
+                scrollToSection(businessRef as RefObject<HTMLDivElement>)
+              }
               className={styles.navLink}
             >
               Save Point
             </button>
             <button
-              onClick={() => scrollToSection(workRef)}
+              onClick={() =>
+                scrollToSection(workRef as RefObject<HTMLDivElement>)
+              }
               className={styles.navLink}
             >
               Work
             </button>
             <button
-              onClick={() => scrollToSection(contactRef)}
+              onClick={() =>
+                scrollToSection(contactRef as RefObject<HTMLDivElement>)
+              }
               className={styles.navLink}
             >
               Contact
