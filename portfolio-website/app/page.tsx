@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, FormEvent } from "react";
+import { useState, useRef, FormEvent, RefObject } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./page.module.css";
 
@@ -27,8 +27,10 @@ export default function Home() {
   );
 
   // Navigation scroll function
-  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToSection = (ref: RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   // Handle form submission
@@ -124,7 +126,7 @@ export default function Home() {
       {/* Navigation Bar */}
       <nav className={styles.navbar}>
         <div className={styles.navContent}>
-          <div className={styles.logo}>
+          <div className={styles.logo} onClick={() => scrollToSection(homeRef)}>
             <h1>Logan Young</h1>
           </div>
           <div className={styles.navLinks}>
