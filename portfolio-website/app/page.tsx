@@ -190,7 +190,9 @@ export default function Home() {
             Enjoy a more enhanced look on what I do
           </p>
           <button
-            onClick={() => scrollToSection(workRef)}
+            onClick={() =>
+              scrollToSection(workRef as RefObject<HTMLDivElement>)
+            }
             className={styles.ctaButton}
           >
             View My Work
@@ -315,7 +317,9 @@ export default function Home() {
                 Visit Website
               </a>
               <button
-                onClick={() => scrollToSection(contactRef)}
+                onClick={() =>
+                  scrollToSection(contactRef as RefObject<HTMLDivElement>)
+                }
                 className={`${styles.businessButton} ${styles.secondaryButton}`}
               >
                 Contact Us
