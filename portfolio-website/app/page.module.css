@@ -1,0 +1,635 @@
+/* Reset and Base Styles */
+.container {
+    min-height: 100vh;
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #2e7d32;
+    color: white;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.navLinks {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navLink {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.navLink:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.mobileMenu {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.heroContent {
+    max-width: 800px;
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroSubtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.ctaButton {
+    background-color: white;
+    color: #2e7d32;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Common Section Styles */
+.section {
+    padding: 5rem 2rem;
+}
+
+.sectionContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.sectionTitle::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #4caf50;
+    border-radius: 2px;
+}
+
+/* About Section */
+.aboutGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.aboutText p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.aboutImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.imageContainer {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.imageContainer:hover {
+    transform: translateY(-5px);
+}
+
+.profileImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.profileImage:hover {
+    transform: scale(1.05);
+}
+
+/* Compact Business Section */
+.businessSection {
+    background-color: #f0f9f0;
+    padding: 3rem 2rem !important;
+}
+
+.businessCard {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: 5px solid #4caf50;
+}
+
+.businessHeader {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.businessLogo {
+    flex-shrink: 0;
+}
+
+.logoPlaceholder {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(46, 125, 50, 0.2);
+}
+
+.logoText {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.businessInfo {
+    flex: 1;
+    min-width: 200px;
+}
+
+.businessName {
+    font-size: 1.8rem;
+    color: #2e7d32;
+    margin: 0 0 0.25rem 0;
+}
+
+.businessWebsite {
+    margin: 0;
+}
+
+.websiteLink {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.websiteLink:hover {
+    color: #2e7d32;
+    text-decoration: underline;
+}
+
+.businessDescription {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.businessDescription p {
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.businessContacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.businessContacts .contactItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #555;
+}
+
+.businessContacts .contactIcon {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.businessContacts .contactText {
+    font-size: 0.95rem;
+}
+
+.businessCta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.businessButton {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 140px;
+}
+
+.businessButton:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.businessButton.secondaryButton {
+    background-color: transparent;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+}
+
+.businessButton.secondaryButton:hover {
+    background-color: #f0f9f0;
+}
+
+/* Work Section */
+.workGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.workCard {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.workCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+    height: 200px;
+    overflow: hidden;
+}
+
+.cardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.workCard:hover .cardImage img {
+    transform: scale(1.1);
+}
+
+.cardContent {
+    padding: 1.5rem;
+}
+
+.cardTitle {
+    font-size: 1.3rem;
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.githubLink {
+    display: inline-block;
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.githubLink:hover {
+    color: #2e7d32;
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contactSubtitle {
+    font-size: 1.8rem;
+    color: #2e7d32;
+    margin-bottom: 2rem;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contactIcon {
+    font-size: 1.5rem;
+}
+
+.contactLabel {
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 0.25rem;
+}
+
+.contactValue {
+    color: #666;
+}
+
+/* Contact Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formLabel {
+    margin-bottom: 0.5rem;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.formInput,
+.formTextarea {
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+.formTextarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submitButton {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.submitButton:hover:not(:disabled) {
+    background-color: #1b5e20;
+}
+
+.submitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.successMessage {
+    color: #2e7d32;
+    background-color: #e8f5e9;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.errorMessage {
+    color: #d32f2f;
+    background-color: #ffebee;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.2rem;
+    }
+
+    .aboutGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .aboutImages {
+        grid-template-columns: 1fr;
+    }
+
+    .businessSection {
+        padding: 2rem 1rem !important;
+    }
+
+    .businessCard {
+        padding: 1.5rem;
+    }
+
+    .businessHeader {
+        gap: 1rem;
+    }
+
+    .logoPlaceholder {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logoText {
+        font-size: 1.2rem;
+    }
+
+    .businessName {
+        font-size: 1.5rem;
+    }
+
+    .businessCta {
+        flex-direction: column;
+    }
+
+    .businessButton {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .workGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .contactGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroTitle {
+        font-size: 2rem;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .profileImage {
+        height: 200px;
+    }
+
+    .businessCard {
+        padding: 1.25rem;
+    }
+
+    .businessHeader {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .businessInfo {
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+/* Animation for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
