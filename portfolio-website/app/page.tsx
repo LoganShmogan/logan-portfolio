@@ -124,7 +124,7 @@ export default function Home() {
       {/* Navigation Bar */}
       <nav className={styles.navbar}>
         <div className={styles.navContent}>
-          <div className={styles.logo} onClick={() => scrollToSection(homeRef)}>
+          <div className={styles.logo}>
             <h1>Logan Young</h1>
           </div>
           <div className={styles.navLinks}>
