@@ -176,9 +176,6 @@ export default function Home() {
               Contact
             </button>
           </div>
-          <div className={styles.mobileMenu}>
-            <span className={styles.menuIcon}>☰</span>
-          </div>
         </div>
       </nav>
 
@@ -303,7 +300,7 @@ export default function Home() {
               </div>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>📱</span>
-                <span className={styles.contactText}>+1 (123) 456-7890</span>
+                <span className={styles.contactText}>+64 (021) 065-3792</span>
               </div>
             </div>
 
