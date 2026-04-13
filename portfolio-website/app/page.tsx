@@ -3,7 +3,7 @@
 import { useState, useRef, FormEvent, RefObject } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./page.module.css";
-
+import Image from "next/image";
 // Initialize EmailJS with your public key
 emailjs.init("pq07HrJkk-lgFXmi1");
 
@@ -81,7 +81,7 @@ export default function Home() {
 		},
 		{
 			id: 2,
-			title: "Save Point Limited website",
+			title: "Save Point website",
 			description: "Web application built with Next.js",
 			imageUrl: "/savePoint.jpg",
 			githubLink: "https://github.com/LoganShmogan/save-point",
@@ -222,31 +222,33 @@ export default function Home() {
 					<div className={styles.aboutGrid}>
 						<div className={styles.aboutText}>
 							<p>
-								I’m Logan Young, a final-year Bachelor
-								of Information and Communication
-								Technology student double majoring in
-								Software Engineering and Web
-								Development. I enjoy building practical,
-								real-world solutions and have a strong
-								interest in full-stack development,
-								working across both front-end and
-								back-end systems.
+								I’m Logan Young, a final-semester
+								Bachelor of Information and
+								Communication Technology (BICT) student,
+								double majoring in Software Engineering
+								and Web Development. I enjoy building
+								practical, real-world solutions and have
+								a strong interest in full-stack
+								development, working across both
+								front-end and back-end systems.
 							</p>
 							<p>
-								I also work part-time as an OSCAR
-								Supervisor, which has strengthened my
-								communication, leadership, and
-								problem-solving skills. Balancing work,
-								study, and contract projects has taught
-								me how to manage my time effectively
-								while delivering consistent results.
+								Currently im contracting as a Junior
+								Full-stack Developer, building various
+								websites, applications, systems and
+								electronics for businesses and sole
+								traders. I also work part time at Little
+								Monkeys as a Childcare Supervisor,
+								organizing activities and working with
+								children.
 							</p>
 							<p>
 								I’m always looking to learn, improve,
 								and take on new challenges, whether
 								that’s refining my technical skills,
 								exploring new tools, or contributing to
-								meaningful projects.
+								meaningful projects. Which my github
+								should give a basic insight of.
 							</p>
 						</div>
 						<div className={styles.aboutImages}>
@@ -292,15 +294,16 @@ export default function Home() {
 					<div className={styles.businessCard}>
 						<div className={styles.businessHeader}>
 							<div className={styles.businessLogo}>
-								<div className={styles.logoPlaceholder}>
-									<span className={styles.logoText}>
-										SP
-									</span>
-								</div>
+								<Image
+									src="/savePointFlag.jpg"
+									width={50}
+									height={50}
+									alt="Save Point Logo Flag "
+								/>
 							</div>
 							<div className={styles.businessInfo}>
 								<h2 className={styles.businessName}>
-									Save Point Limited
+									Save Point
 								</h2>
 								<p className={styles.businessWebsite}>
 									<a
@@ -328,11 +331,6 @@ export default function Home() {
 									contact@savepoint.cc
 								</span>
 							</div>
-							<div className={styles.contactItem}>
-								<span className={styles.contactText}>
-									+64 (021) 065-3792
-								</span>
-							</div>
 						</div>
 
 						<div className={styles.businessCta}>
@@ -344,16 +342,6 @@ export default function Home() {
 							>
 								Visit Website
 							</a>
-							<button
-								onClick={() =>
-									scrollToSection(
-										contactRef as RefObject<HTMLDivElement>,
-									)
-								}
-								className={`${styles.businessButton} ${styles.secondaryButton}`}
-							>
-								Contact Us
-							</button>
 						</div>
 					</div>
 				</div>
