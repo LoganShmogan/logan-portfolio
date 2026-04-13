@@ -221,6 +221,7 @@ export default function Home() {
 					<h2 className={styles.sectionTitle}>About Me</h2>
 					<div className={styles.aboutGrid}>
 						<div className={styles.aboutText}>
+							{/*this is a change (testing please ignore)*/}
 							<p>
 								I’m Logan Young, a final-semester
 								Bachelor of Information and
