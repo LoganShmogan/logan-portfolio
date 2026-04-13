@@ -317,26 +317,18 @@ export default function Home() {
 
 						<div className={styles.businessDescription}>
 							<p>
-								We specialize in modernizing and
-								optimizing your digital infrastructure
-								with customized solutions that drive
-								growth and efficiency.
+								Intellegent connected systems built with
+								you.
 							</p>
 						</div>
 
 						<div className={styles.businessContacts}>
 							<div className={styles.contactItem}>
-								<span className={styles.contactIcon}>
-									✉️
-								</span>
 								<span className={styles.contactText}>
 									contact@savepoint.cc
 								</span>
 							</div>
 							<div className={styles.contactItem}>
-								<span className={styles.contactIcon}>
-									📱
-								</span>
 								<span className={styles.contactText}>
 									+64 (021) 065-3792
 								</span>
