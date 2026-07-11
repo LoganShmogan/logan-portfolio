@@ -208,6 +208,16 @@ export default function Home() {
 		},
 		{
 			id: 5,
+			title: "Save Point Website",
+			description:
+				"Marketing site for my own company, Save Point — statically rendered with Next.js App Router and hand-written CSS Modules, with zero backend or client-side state.",
+			imageUrl: "/savePoint.jpg",
+			techTags: ["Next.js", "TypeScript", "React", "CSS Modules"],
+			githubLink: "https://github.com/LoganShmogan/save-point",
+			liveLink: "https://savepoint.cc",
+		},
+		{
+			id: 6,
 			title: "Logan Portfolio",
 			description:
 				"This portfolio site itself — showcasing my projects, technical skills, education and business, styled after Save Point's branding.",
@@ -218,7 +228,7 @@ export default function Home() {
 			liveLink: "https://loganyoung.foo",
 		},
 		{
-			id: 6,
+			id: 7,
 			title: "Dice Game",
 			description:
 				"A .NET MAUI mobile app simulating a 2-player dice game — turn-based rolling, random dice imagery, and a first-to-20 win condition.",
@@ -228,7 +238,7 @@ export default function Home() {
 			githubLink: "https://github.com/LoganShmogan/dice-game",
 		},
 		{
-			id: 7,
+			id: 8,
 			title: "To-Do List Manager",
 			description:
 				"A C# to-do list manager with both a WPF GUI and a command-line interface — categories, due dates, priorities and labels for tasks.",
@@ -239,7 +249,7 @@ export default function Home() {
 				"https://github.com/LoganShmogan/Todo-list-manager-app",
 		},
 		{
-			id: 8,
+			id: 9,
 			title: "Property Management Webapp",
 			description:
 				"A property listings webapp for New Zealand properties, with user accounts and session-based auth backed by MySQL.",
