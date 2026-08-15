@@ -152,8 +152,7 @@ export default function Home() {
 			title: "Dice Game",
 			description:
 				"A .NET MAUI mobile app simulating a 2-player dice game, with turn-based rolling, random dice imagery, and a first-to-20 win condition.",
-			placeholderLabel: "Dice Game",
-			placeholderVariant: 3,
+			imageUrl: "/diceGame.png",
 			techTags: ["C#", ".NET MAUI"],
 			githubLink: "https://github.com/LoganShmogan/dice-game",
 		},
