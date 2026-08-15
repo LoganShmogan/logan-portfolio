@@ -171,8 +171,7 @@ export default function Home() {
 			title: "Property Management Webapp",
 			description:
 				"A property listings webapp for New Zealand properties, with user accounts and session-based auth backed by MySQL.",
-			placeholderLabel: "Property Management",
-			placeholderVariant: 1,
+			imageUrl: "/propertyManagement.png",
 			techTags: ["Node.js", "Express", "Handlebars", "MySQL", "Tailwind CSS"],
 			githubLink:
 				"https://github.com/LoganShmogan/property-management-webapp",
