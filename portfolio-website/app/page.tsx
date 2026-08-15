@@ -88,12 +88,12 @@ export default function Home() {
 	const workItems: WorkItem[] = [
 		{
 			id: 1,
-			title: "ASA Sign-In System",
+			title: "Kiosk Sign-In System",
 			description:
-				"Sign-in/out kiosk and web dashboard built for After School Adventures childcare centre, with signature capture, caregiver notifications, run sheets and sign-in analytics.",
-			imageUrl: "/asaSignIn.png",
+				"Open-source sign-in/out kiosk and web dashboard for tracking attendance, originally built for a childcare centre. Includes signature capture, caregiver email notifications, run sheets and sign-in analytics.",
+			imageUrl: "/kioskSignIn.png",
 			techTags: ["Python", "Flask", "Tkinter", "SQLite", "Chart.js"],
-			githubLink: "https://github.com/LoganShmogan/asa-sign-in-system",
+			githubLink: "https://github.com/LoganShmogan/kiosk-signin-system",
 		},
 		{
 			id: 2,
@@ -111,11 +111,9 @@ export default function Home() {
 			title: "NutriTrack",
 			description:
 				"Nutrition tracking app with a 2,700+ item NZ food database, dietary intake charts and PDF/CSV reporting, built as a university software engineering project.",
-			placeholderLabel: "NutriTrack",
-			placeholderVariant: 1,
+			imageUrl: "/nutriTrack.png",
 			techTags: ["Next.js", "TypeScript", "SQL", "Docker"],
 			githubLink: "https://github.com/LoganShmogan/nextjs-nutrition-app",
-			liveLink: "https://nextjs-nutrition-app-sooty.vercel.app",
 		},
 		{
 			id: 4,
@@ -126,6 +124,8 @@ export default function Home() {
 			techTags: ["Python", "scikit-learn", "Pandas", "Matplotlib"],
 			githubLink:
 				"https://github.com/LoganShmogan/Machine-learning-techniques",
+			liveLink:
+				"https://colab.research.google.com/github/LoganShmogan/Machine-learning-techniques/blob/main/allTasks.ipynb#scrollTo=main_title",
 		},
 		{
 			id: 5,
@@ -139,11 +139,10 @@ export default function Home() {
 		},
 		{
 			id: 6,
-			title: "Logan Portfolio",
+			title: "Portfolio Website",
 			description:
 				"This portfolio site itself, showcasing my projects, technical skills, education and business, styled after Save Point's branding.",
-			placeholderLabel: "Logan Portfolio",
-			placeholderVariant: 2,
+			imageUrl: "/portfolioWebsite.png",
 			techTags: ["Next.js", "TypeScript", "EmailJS", "Vercel"],
 			githubLink: "https://github.com/LoganShmogan/logan-portfolio",
 			liveLink: "https://loganyoung.foo",
