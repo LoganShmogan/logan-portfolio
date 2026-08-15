@@ -1,11 +1,7 @@
 "use client";
 
-import { useState, useRef, FormEvent, RefObject } from "react";
-import emailjs from "@emailjs/browser";
+import { useRef, RefObject } from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
-// Initialize EmailJS with your public key
-emailjs.init("pq07HrJkk-lgFXmi1");
 
 export default function Home() {
 	// Refs for navigation
@@ -14,60 +10,12 @@ export default function Home() {
 	const skillsRef = useRef<HTMLElement>(null);
 	const workRef = useRef<HTMLElement>(null);
 	const contactRef = useRef<HTMLElement>(null);
-	const businessRef = useRef<HTMLElement>(null);
-
-	// State for contact form
-	const [formData, setFormData] = useState({
-		name: "",
-		email: "",
-		message: "",
-	});
-	const [isSending, setIsSending] = useState(false);
-	const [sendStatus, setSendStatus] = useState<"idle" | "success" | "error">(
-		"idle",
-	);
 
 	// Navigation scroll function
 	const scrollToSection = (ref: RefObject<HTMLElement>) => {
 		if (ref.current) {
 			ref.current.scrollIntoView({ behavior: "smooth" });
 		}
-	};
-
-	// Handle form submission
-	const handleSubmit = async (e: FormEvent) => {
-		e.preventDefault();
-		setIsSending(true);
-		setSendStatus("idle");
-
-		try {
-			await emailjs.send(
-				"service_xm7z2vd", // EmailJS service ID
-				"template_1046f4c", // EmailJS template ID
-				{
-					from_name: formData.name,
-					from_email: formData.email,
-					message: formData.message,
-					to_email: "younglogan09@gmail.com",
-				},
-			);
-
-			setSendStatus("success");
-			setFormData({ name: "", email: "", message: "" });
-		} catch (error) {
-			console.error("Email sending error:", error);
-			setSendStatus("error");
-		} finally {
-			setIsSending(false);
-		}
-	};
-
-	// Handle form input changes
-	const handleInputChange = (
-		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-	) => {
-		const { name, value } = e.target;
-		setFormData((prev) => ({ ...prev, [name]: value }));
 	};
 
 	// Education and current work
@@ -83,18 +31,10 @@ export default function Home() {
 		{
 			id: 2,
 			tag: "Current Role",
-			title: "Junior Full-Stack Developer",
-			meta: "Contracting for businesses & sole traders",
+			title: "Full-Stack Developer",
+			meta: "Save Point Limited",
 			description:
-				"Building websites, applications, business systems and electronics on contract, alongside running Save Point.",
-		},
-		{
-			id: 3,
-			tag: "Part-Time",
-			title: "Childcare Supervisor",
-			meta: "Little Monkeys",
-			description:
-				"Organising activities and supervising children part-time alongside my development work and studies.",
+				"Building and maintaining web applications, business systems and connected devices at Save Point Limited.",
 		},
 	];
 
@@ -132,25 +72,6 @@ export default function Home() {
 		},
 	];
 
-	// Save Point services (from savepoint.cc)
-	const savePointServices = [
-		{
-			id: 1,
-			title: "Automation",
-			description: "IoT solutions using Arduino, Raspberry Pi and similar platforms.",
-		},
-		{
-			id: 2,
-			title: "Custom Software",
-			description: "Advanced systems including database management, CRM and POS.",
-		},
-		{
-			id: 3,
-			title: "Web Applications",
-			description: "Cross-platform digital products for startups and established businesses.",
-		},
-	];
-
 	// Work portfolio items data
 	type WorkItem = {
 		id: number;
@@ -178,7 +99,7 @@ export default function Home() {
 			id: 2,
 			title: "Happy Horizons Website",
 			description:
-				"Contract build for a childcare business — a marketing site covering enrolment, gallery and contact handling, live at happyhorizons.nz.",
+				"Contract build for a childcare business, a marketing site covering enrolment, gallery and contact handling, live at happyhorizons.nz.",
 			imageUrl: "/happyHorizons.png",
 			techTags: ["Next.js", "TypeScript", "EmailJS", "Vercel"],
 			githubLink:
@@ -210,7 +131,7 @@ export default function Home() {
 			id: 5,
 			title: "Save Point Website",
 			description:
-				"Marketing site for my own company, Save Point — statically rendered with Next.js App Router and hand-written CSS Modules, with zero backend or client-side state.",
+				"Marketing site for my own company, Save Point, statically rendered with Next.js App Router and hand-written CSS Modules, with zero backend or client-side state.",
 			imageUrl: "/savePoint.jpg",
 			techTags: ["Next.js", "TypeScript", "React", "CSS Modules"],
 			githubLink: "https://github.com/LoganShmogan/save-point",
@@ -220,7 +141,7 @@ export default function Home() {
 			id: 6,
 			title: "Logan Portfolio",
 			description:
-				"This portfolio site itself — showcasing my projects, technical skills, education and business, styled after Save Point's branding.",
+				"This portfolio site itself, showcasing my projects, technical skills, education and business, styled after Save Point's branding.",
 			placeholderLabel: "Logan Portfolio",
 			placeholderVariant: 2,
 			techTags: ["Next.js", "TypeScript", "EmailJS", "Vercel"],
@@ -231,7 +152,7 @@ export default function Home() {
 			id: 7,
 			title: "Dice Game",
 			description:
-				"A .NET MAUI mobile app simulating a 2-player dice game — turn-based rolling, random dice imagery, and a first-to-20 win condition.",
+				"A .NET MAUI mobile app simulating a 2-player dice game, with turn-based rolling, random dice imagery, and a first-to-20 win condition.",
 			placeholderLabel: "Dice Game",
 			placeholderVariant: 3,
 			techTags: ["C#", ".NET MAUI"],
@@ -241,7 +162,7 @@ export default function Home() {
 			id: 8,
 			title: "To-Do List Manager",
 			description:
-				"A C# to-do list manager with both a WPF GUI and a command-line interface — categories, due dates, priorities and labels for tasks.",
+				"A C# to-do list manager with both a WPF GUI and a command-line interface, supporting categories, due dates, priorities and labels for tasks.",
 			placeholderLabel: "To-Do List Manager",
 			placeholderVariant: 4,
 			techTags: ["C#", "WPF", ".NET"],
@@ -310,16 +231,6 @@ export default function Home() {
 						<button
 							onClick={() =>
 								scrollToSection(
-									businessRef as RefObject<HTMLDivElement>,
-								)
-							}
-							className={styles.navLink}
-						>
-							Save Point
-						</button>
-						<button
-							onClick={() =>
-								scrollToSection(
 									workRef as RefObject<HTMLDivElement>,
 								)
 							}
@@ -347,9 +258,8 @@ export default function Home() {
 					<p className={styles.heroEyebrow}>Full-Stack Developer</p>
 					<h1 className={styles.heroTitle}>Logan Young</h1>
 					<p className={styles.heroSubtitle}>
-						I build web apps, business systems and connected
-						devices — from university coursework to contract work
-						and my own company, Save Point.
+						I build websites, apps, business systems and connected
+						devices.
 					</p>
 					<div className={styles.heroActions}>
 						<button
@@ -391,21 +301,18 @@ export default function Home() {
 							front-end and back-end systems.
 						</p>
 						<p>
-							Currently I&rsquo;m contracting as a Junior
-							Full-Stack Developer, building websites,
-							applications, systems and electronics for
-							businesses and sole traders, while also running my
-							own company, Save Point. I also work part time at
-							Little Monkeys as a Childcare Supervisor,
-							organising activities and working with children.
+							Currently I&rsquo;m a Full-Stack Developer at Save
+							Point Limited, building websites, applications,
+							systems and electronics for businesses and sole
+							traders.
 						</p>
 						<p>
 							I&rsquo;m always looking to learn, improve, and
 							take on new challenges, whether that&rsquo;s
 							refining my technical skills, exploring new tools,
-							or contributing to meaningful projects &mdash;
-							which the Work section below should give a good
-							insight into.
+							or contributing to meaningful projects, which the
+							Work section below should give a good insight
+							into.
 						</p>
 					</div>
 					<div className={styles.aboutImages}>
@@ -491,79 +398,6 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* BUSINESS SECTION */}
-			<section
-				ref={businessRef}
-				className={`${styles.section} ${styles.businessSection}`}
-			>
-				<div className={styles.businessCard}>
-					<div className={styles.businessHeader}>
-						<div className={styles.businessLogo}>
-							<Image
-								src="/savePointFlag.jpg"
-								width={50}
-								height={50}
-								alt="Save Point Logo Flag "
-							/>
-						</div>
-						<div className={styles.businessInfo}>
-							<h2 className={styles.businessName}>
-								Save Point
-							</h2>
-							<p className={styles.businessWebsite}>
-								<a
-									href="https://savepoint.cc"
-									target="_blank"
-									rel="noopener noreferrer"
-									className={styles.websiteLink}
-								>
-									savepoint.cc
-								</a>
-							</p>
-						</div>
-					</div>
-
-					<div className={styles.businessDescription}>
-						<p>Intelligent connected systems built with you.</p>
-					</div>
-
-					<div className={styles.servicesGrid}>
-						{savePointServices.map((service) => (
-							<div
-								key={service.id}
-								className={styles.serviceItem}
-							>
-								<h3 className={styles.serviceItemTitle}>
-									{service.title}
-								</h3>
-								<p className={styles.serviceItemDesc}>
-									{service.description}
-								</p>
-							</div>
-						))}
-					</div>
-
-					<div className={styles.businessContacts}>
-						<div className={styles.contactItem}>
-							<span className={styles.contactText}>
-								contact@savepoint.cc
-							</span>
-						</div>
-					</div>
-
-					<div className={styles.businessCta}>
-						<a
-							href="https://savepoint.cc"
-							target="_blank"
-							rel="noopener noreferrer"
-							className={styles.businessButton}
-						>
-							Visit Website
-						</a>
-					</div>
-				</div>
-			</section>
-
 			{/* Work Section */}
 			<section ref={workRef} className={styles.section}>
 				<h2 className={styles.sectionTitle}>My Work</h2>
@@ -634,120 +468,25 @@ export default function Home() {
 			{/* Contact Section */}
 			<section ref={contactRef} className={styles.section}>
 				<h2 className={styles.sectionTitle}>Contact Me</h2>
-				<div className={styles.contactGrid}>
-					<div className={styles.contactInfo}>
-						<h3 className={styles.contactSubtitle}>
-							Get in Touch
-						</h3>
-						<div className={styles.contactDetails}>
-							<div className={styles.contactItem}>
-								<span className={styles.contactIcon}>
-									&#9993;
-								</span>
-								<div>
-									<p className={styles.contactLabel}>
-										Email
-									</p>
-									<p className={styles.contactValue}>
-										younglogan09@gmail.com
-									</p>
-								</div>
-							</div>
-							<div className={styles.contactItem}>
-								<span className={styles.contactIcon}>
-									&#128241;
-								</span>
-								<div>
-									<p className={styles.contactLabel}>
-										Phone
-									</p>
-									<p className={styles.contactValue}>
-										+64 (021) 065-3792
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div className={styles.contactForm}>
-						<form
-							onSubmit={handleSubmit}
-							className={styles.form}
+				<div className={styles.contactWrap}>
+					<p className={styles.contactBlurb}>
+						Open to contract work, collaborations and new
+						opportunities. Reach out any time and I&apos;ll
+						usually get back to you within a day or two.
+					</p>
+					<div className={styles.contactLinks}>
+						<a
+							href="mailto:younglogan09@gmail.com"
+							className={styles.contactLink}
 						>
-							<div className={styles.formGroup}>
-								<label
-									htmlFor="name"
-									className={styles.formLabel}
-								>
-									Name
-								</label>
-								<input
-									type="text"
-									id="name"
-									name="name"
-									value={formData.name}
-									onChange={handleInputChange}
-									className={styles.formInput}
-									required
-								/>
-							</div>
-
-							<div className={styles.formGroup}>
-								<label
-									htmlFor="email"
-									className={styles.formLabel}
-								>
-									Email
-								</label>
-								<input
-									type="email"
-									id="email"
-									name="email"
-									value={formData.email}
-									onChange={handleInputChange}
-									className={styles.formInput}
-									required
-								/>
-							</div>
-
-							<div className={styles.formGroup}>
-								<label
-									htmlFor="message"
-									className={styles.formLabel}
-								>
-									Message
-								</label>
-								<textarea
-									id="message"
-									name="message"
-									value={formData.message}
-									onChange={handleInputChange}
-									className={styles.formTextarea}
-									rows={4}
-									required
-								/>
-							</div>
-
-							<button
-								type="submit"
-								className={styles.submitButton}
-								disabled={isSending}
-							>
-								{isSending ? "Sending..." : "Send Message"}
-							</button>
-
-							{sendStatus === "success" && (
-								<p className={styles.successMessage}>
-									Message sent successfully!
-								</p>
-							)}
-
-							{sendStatus === "error" && (
-								<p className={styles.errorMessage}>
-									Failed to send message. Please try again.
-								</p>
-							)}
-						</form>
+							younglogan09@gmail.com
+						</a>
+						<a
+							href="tel:+64210653792"
+							className={styles.contactLink}
+						>
+							+64 (021) 065-3792
+						</a>
 					</div>
 				</div>
 			</section>
