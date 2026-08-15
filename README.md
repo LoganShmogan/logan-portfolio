@@ -6,5 +6,4 @@ This repository contains the source code for my portfolio website, live at [loga
 This project is built with the following technologies:
 *   **NextJs**
 *   **Vercel**
-*   **Emailjs**
 *   **Brevo**
