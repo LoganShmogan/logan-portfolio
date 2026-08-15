@@ -161,8 +161,7 @@ export default function Home() {
 			title: "To-Do List Manager",
 			description:
 				"A C# to-do list manager with both a WPF GUI and a command-line interface, supporting categories, due dates, priorities and labels for tasks.",
-			placeholderLabel: "To-Do List Manager",
-			placeholderVariant: 4,
+			imageUrl: "/todoListManager.png",
 			techTags: ["C#", "WPF", ".NET"],
 			githubLink:
 				"https://github.com/LoganShmogan/Todo-list-manager-app",
