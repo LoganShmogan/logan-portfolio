@@ -1,0 +1,39 @@
+.story {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Logo on a dark "screen" tile, like Save Point's error pages */
+.logoTile {
+  background: var(--black);
+  border: var(--border);
+}
+
+.logoTile img {
+  display: block;
+  width: 100%;
+  image-rendering: pixelated;
+}
+
+.serviceTitle {
+  font-size: 1.25rem;
+  color: var(--green-deep);
+  margin-bottom: 10px;
+}
+
+.serviceDesc {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  .story {
+    grid-template-columns: 1fr;
+  }
+
+  .logoTile {
+    max-width: 200px;
+  }
+}

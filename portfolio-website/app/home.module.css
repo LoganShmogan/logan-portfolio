@@ -1,0 +1,151 @@
+/* Home hero */
+.hero {
+  position: relative;
+  background: var(--forest);
+  color: var(--on-forest);
+  margin-bottom: calc(var(--pixel) * 2);
+}
+
+/* Stepped pixel edge dropping out of the hero */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: calc(var(--pixel) * 2);
+  background:
+    linear-gradient(var(--forest), var(--forest)) top / 100% var(--pixel)
+      no-repeat,
+    linear-gradient(90deg, var(--forest) 50%, transparent 0) bottom /
+      calc(var(--pixel) * 4) var(--pixel) repeat-x;
+}
+
+.heroInner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 72px var(--gutter) 88px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.heroTitle {
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  margin-bottom: 20px;
+}
+
+.heroLead {
+  font-size: 1.3125rem;
+  color: var(--on-forest-soft);
+  max-width: 32em;
+  margin-bottom: 32px;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* "Player select" card */
+.playerCard {
+  background: var(--forest-soft);
+  border: solid 3px var(--on-forest);
+  box-shadow: 8px 8px 0 var(--green);
+  padding: 20px;
+}
+
+.playerHeading {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 12px;
+}
+
+.playerPhoto {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: solid 3px var(--on-forest);
+  margin-bottom: 16px;
+}
+
+.playerStats {
+  margin: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.playerRow {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+  padding: 6px 0;
+  border-top: dashed 2px var(--forest);
+  font-size: 1rem;
+}
+
+.playerRow dt {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.playerRow dd {
+  margin: 0;
+}
+
+/* Save Point teaser */
+.savePoint {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 72px;
+}
+
+.savePointLogo {
+  display: block;
+  width: 100%;
+  border: var(--border);
+  image-rendering: pixelated;
+}
+
+.moreProjects {
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Mobile / Tablet ── */
+@media (max-width: 900px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+    padding-top: 48px;
+    padding-bottom: 64px;
+    gap: 40px;
+  }
+
+  .playerCard {
+    max-width: 360px;
+  }
+
+  .heroLead {
+    font-size: 1.1875rem;
+  }
+
+  .savePoint {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .savePointLogo {
+    max-width: 200px;
+  }
+}

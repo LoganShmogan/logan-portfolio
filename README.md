@@ -1,5 +1,5 @@
 # Logan Portfolio
-This repository contains the source code for my portfolio website, live at [loganyoung.foo](https://loganyoung.foo).
+This repository contains the source code for my portfolio website, live at [loganportfolio.savepoint.co.nz](https://loganportfolio.savepoint.co.nz).
 
 ## Built With
 

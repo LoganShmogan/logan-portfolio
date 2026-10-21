@@ -1,0 +1,66 @@
+/* Chunky retro buttons, matching Save Point's "start" buttons */
+.button,
+.buttonOutline,
+.buttonDark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 12px 24px;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  border: var(--border);
+  transition:
+    transform 0.1s,
+    box-shadow 0.1s;
+}
+
+/* Primary: yellow "press start" button */
+.button {
+  background: var(--yellow);
+  color: var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+/* Secondary, for use on dark forest backgrounds */
+.buttonOutline {
+  background: transparent;
+  color: var(--on-forest);
+  border-color: var(--on-forest);
+}
+
+/* Secondary, for use on light backgrounds */
+.buttonDark {
+  background: var(--forest);
+  color: var(--on-forest);
+  box-shadow: 4px 4px 0 var(--green);
+}
+
+.button:hover {
+  color: var(--ink);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.buttonDark:hover {
+  color: var(--on-forest);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--green);
+}
+
+.buttonOutline:hover {
+  background: var(--on-forest);
+  color: var(--forest);
+}
+
+@media (max-width: 600px) {
+  .button,
+  .buttonOutline,
+  .buttonDark {
+    width: 100%;
+  }
+}

@@ -1,0 +1,329 @@
+/* Shared layout for every page */
+
+/* Dark hero band at the top of each page */
+.hero {
+  position: relative;
+  background: var(--forest);
+  color: var(--on-forest);
+  margin-bottom: calc(var(--pixel) * 2);
+}
+
+/* Stepped pixel edge dropping out of the hero */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: calc(var(--pixel) * 2);
+  background:
+    linear-gradient(var(--forest), var(--forest)) top / 100% var(--pixel)
+      no-repeat,
+    linear-gradient(90deg, var(--forest) 50%, transparent 0) bottom /
+      calc(var(--pixel) * 4) var(--pixel) repeat-x;
+}
+
+.heroInner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 56px var(--gutter) 64px;
+}
+
+/* Green label above hero titles */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--forest);
+  background: var(--green);
+  padding: 4px 12px;
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+}
+
+.heroLead {
+  font-size: 1.3125rem;
+  color: var(--on-forest-soft);
+  max-width: 36em;
+  margin: 16px 0 0;
+}
+
+/* Main content wrapper */
+.content {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 56px var(--gutter) 0;
+}
+
+/* Section block: white card with a chunky retro border */
+.section {
+  background: var(--paper-raised);
+  border: var(--border);
+  box-shadow: var(--pixel-shadow);
+  padding: clamp(20px, 4vw, 40px);
+  margin-bottom: 40px;
+  /* Keep headings clear of the sticky nav when jumped to */
+  scroll-margin-top: 100px;
+}
+
+.sectionTitle {
+  font-size: clamp(1.625rem, 3vw, 2rem);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: solid 4px var(--green);
+}
+
+/* Green label above section titles on light backgrounds */
+.sectionEyebrow {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+  margin-bottom: 8px;
+}
+
+/* Heading + intro for a group of cards */
+.groupHeader {
+  margin: 0 0 24px;
+  scroll-margin-top: 100px;
+}
+
+.groupTitle {
+  font-size: clamp(1.75rem, 3.5vw, 2.375rem);
+  margin-bottom: 8px;
+}
+
+.groupLead {
+  color: var(--ink-soft);
+  max-width: 44em;
+}
+
+/* Long-form text stays at a comfortable reading width */
+.sectionBody {
+  max-width: 44em;
+}
+
+.sectionBody p:last-child {
+  margin-bottom: 0;
+}
+
+.subHeadPart {
+  font-size: 1.375rem;
+  margin: 28px 0 10px;
+}
+
+.subHeadPart:first-child {
+  margin-top: 0;
+}
+
+/* "Last updated" lines */
+.updated {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+/* Table of contents */
+.contents {
+  list-style: decimal;
+  margin: 0;
+  padding-left: 1.4em;
+  display: grid;
+  gap: 8px;
+  font-size: 1.25rem;
+}
+
+.list {
+  list-style: disc;
+  margin: 0 0 1em;
+  padding-left: 1.4em;
+  display: grid;
+  gap: 6px;
+}
+
+/* Square pixel bullets */
+.pixelList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pixelList li {
+  display: flex;
+  gap: 12px;
+}
+
+.pixelList li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: 0.6em;
+  background: var(--green-deep);
+}
+
+.inlineLink {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* Two and three column grids */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.grid2 > .section,
+.grid3 > .section {
+  margin-bottom: 0;
+}
+
+/* Grid of project cards */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+/* Small tag, e.g. "Education" */
+.tag {
+  display: inline-block;
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--yellow);
+  padding: 2px 10px;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.cardMeta {
+  font-weight: 600;
+  color: var(--green-deep);
+  margin-bottom: 12px;
+}
+
+/* Skill chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chips li {
+  font-size: 1rem;
+  padding: 4px 12px;
+  background: var(--paper-tint);
+  border: solid 2px var(--ink);
+}
+
+/* Contact rows */
+.contactList {
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.contactRow {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-top: solid 2px var(--paper-tint);
+  font-size: 1.25rem;
+}
+
+.contactRow dd {
+  margin: 0;
+}
+
+.contactLabel {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  color: var(--green-deep);
+}
+
+/* Row of buttons */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+/* Centred message for the not-found page */
+.message {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 72px var(--gutter) 0;
+  text-align: center;
+}
+
+.messageTitle {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 16px;
+}
+
+.message .actions {
+  justify-content: center;
+}
+
+/* ── Mobile / Tablet ── */
+@media (max-width: 900px) {
+  .grid2,
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroInner {
+    padding: 40px var(--gutter) 48px;
+  }
+
+  .heroLead {
+    font-size: 1.1875rem;
+  }
+
+  .content {
+    padding-top: 40px;
+  }
+
+  .contactRow {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
