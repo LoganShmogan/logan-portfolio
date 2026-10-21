@@ -196,14 +196,15 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "save-point-infrastructure",
-    title: "Save Point Infrastructure",
+    slug: "loganserver",
+    title: "loganserver",
     category: "hardware",
     description:
-      "Self-hosted server that runs Save Point's internal apps on savepoint.co.nz subdomains through Cloudflare Tunnel and Caddy, including a live client attendance dashboard served straight from its kiosk, with hardware security keys on key accounts.",
-    placeholderLabel: "Infra",
-    techTags: ["Linux", "Cloudflare Tunnel", "Caddy", "Docker"],
-    status: "Internal",
+      "My headless Ubuntu home server, which hosts this portfolio and Save Point's apps. Each app runs in its own Docker Compose stack behind a Caddy reverse proxy that only listens locally, and a Cloudflare Tunnel brings every savepoint.co.nz subdomain in, so no ports are open to the internet. I manage it over Tailscale with hardware-key SSH and keep a full build log and runbook.",
+    placeholderLabel: "loganserver",
+    techTags: ["Ubuntu Server", "Docker Compose", "Caddy", "Cloudflare Tunnel", "Tailscale"],
+    status: "Self-hosted",
+    featured: true,
   },
   {
     slug: "in-home-ai",
