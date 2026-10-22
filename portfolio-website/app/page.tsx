@@ -3,7 +3,7 @@ import styles from "@/app/home.module.css";
 import page from "@/app/shared/page.module.css";
 import buttons from "@/app/shared/button.module.css";
 import ProjectCard from "@/app/components/projectCard";
-import { projects } from "@/app/data/projects";
+import { imagesFirst, projects } from "@/app/data/projects";
 
 // "Player select" stats shown beside the hero
 const playerStats = [
@@ -14,7 +14,7 @@ const playerStats = [
 ];
 
 export default function Home() {
-  const featured = projects.filter((project) => project.featured);
+  const featured = imagesFirst(projects.filter((project) => project.featured));
 
   return (
     <>

@@ -94,6 +94,7 @@ export const projects: Project[] = [
     imageUrl: "/kioskSignIn.png",
     techTags: ["Python", "Flask", "Tkinter", "SQLite", "Chart.js"],
     githubLink: "https://github.com/LoganShmogan/kiosk-signin-system",
+    featured: true,
   },
 
   // ── Apps & products ──
@@ -121,6 +122,7 @@ export const projects: Project[] = [
     liveLink: "https://alotanotes.savepoint.co.nz",
     liveLabel: "Live demo",
     status: "Private repo",
+    featured: true,
   },
   {
     slug: "quiz-app-ai",
@@ -131,6 +133,7 @@ export const projects: Project[] = [
     placeholderLabel: "Quiz App AI",
     techTags: ["Python", "Tkinter", "SQLite", "PyInstaller", "GitHub Actions"],
     githubLink: "https://github.com/LoganShmogan/Quiz-app-Ai",
+    featured: true,
   },
   {
     slug: "ai-job-search",
@@ -141,6 +144,7 @@ export const projects: Project[] = [
     placeholderLabel: "Job Search",
     techTags: ["Python", "Playwright", "Claude API", "pytest"],
     githubLink: "https://github.com/LoganShmogan/Ai-Job-Search-Tool",
+    featured: true,
   },
   {
     slug: "lifestyle-app",
@@ -163,6 +167,7 @@ export const projects: Project[] = [
     imageUrl: "/nutriTrack.png",
     techTags: ["Next.js", "TypeScript", "SQL", "Docker"],
     githubLink: "https://github.com/LoganShmogan/nextjs-nutrition-app",
+    featured: true,
   },
   {
     slug: "property-management",
@@ -197,7 +202,6 @@ export const projects: Project[] = [
     placeholderLabel: "MemeBrowser",
     techTags: ["Python", "Raspberry Pi", "Tkinter", "libVLC", "SQLite", "3D printing"],
     status: "Private repo",
-    featured: true,
   },
   {
     slug: "loganserver",
@@ -208,7 +212,6 @@ export const projects: Project[] = [
     placeholderLabel: "loganserver",
     techTags: ["Ubuntu Server", "Docker Compose", "Caddy", "Cloudflare Tunnel", "Tailscale"],
     status: "Self-hosted",
-    featured: true,
   },
   {
     slug: "in-home-ai",
@@ -286,3 +289,7 @@ export const projects: Project[] = [
     githubLink: "https://github.com/LoganShmogan/weather-webapp",
   },
 ];
+
+// Projects with a real screenshot first, otherwise keeping list order
+export const imagesFirst = (list: Project[]) =>
+  [...list].sort((a, b) => Number(!a.imageUrl) - Number(!b.imageUrl));

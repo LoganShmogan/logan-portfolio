@@ -4,7 +4,7 @@ import styles from "@/app/save-point/savePoint.module.css";
 import buttons from "@/app/shared/button.module.css";
 import PageHero from "@/app/components/pageHero";
 import ProjectCard from "@/app/components/projectCard";
-import { projects } from "@/app/data/projects";
+import { imagesFirst, projects } from "@/app/data/projects";
 
 export const metadata: Metadata = {
   title: "Save Point",
@@ -45,7 +45,9 @@ const roleDuties = [
 ];
 
 export default function SavePoint() {
-  const clientWork = projects.filter((project) => project.category === "client");
+  const clientWork = imagesFirst(
+    projects.filter((project) => project.category === "client"),
+  );
 
   return (
     <>

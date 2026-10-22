@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import page from "@/app/shared/page.module.css";
 import PageHero from "@/app/components/pageHero";
 import ProjectCard from "@/app/components/projectCard";
-import { categories, projects } from "@/app/data/projects";
+import { categories, imagesFirst, projects } from "@/app/data/projects";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -45,11 +45,11 @@ export default function Projects() {
               <p className={page.groupLead}>{category.lead}</p>
             </div>
             <div className={page.projectGrid}>
-              {projects
-                .filter((project) => project.category === category.id)
-                .map((project) => (
-                  <ProjectCard key={project.slug} project={project} />
-                ))}
+              {imagesFirst(
+                projects.filter((project) => project.category === category.id),
+              ).map((project) => (
+                <ProjectCard key={project.slug} project={project} />
+              ))}
             </div>
           </section>
         ))}
