@@ -105,6 +105,8 @@ export const projects: Project[] = [
       "Food safety records for NZ and Australian food businesses, built around MPI Food Control Plan rules. Goods-inwards checks with barcode scanning and Open Food Facts auto-fill, temperature logs, audits, automatic corrective actions, expiry alerts, batch recall tracing and a full audit trail. 100% unit test coverage on both app and backend.",
     placeholderLabel: "Food Safety",
     techTags: ["Flutter", "Dart", "Convex", "TypeScript", "Vitest"],
+    liveLink: "https://foodsafety.savepoint.co.nz",
+    liveLabel: "Live demo",
     status: "Private repo",
     featured: true,
   },
@@ -116,6 +118,8 @@ export const projects: Project[] = [
       "Mobile notes and spaced-repetition quiz app. Organise notes into subjects, import .txt, .md, .pdf, .docx or .pptx files, and generate quiz questions with your own OpenAI-compatible or Anthropic API key. A from-scratch Flutter rewrite of Quiz App AI, with 100% test coverage.",
     placeholderLabel: "AlotaNotes",
     techTags: ["Flutter", "Dart", "OpenAI / Anthropic APIs", "Docker"],
+    liveLink: "https://alotanotes.savepoint.co.nz",
+    liveLabel: "Live demo",
     status: "Private repo",
   },
   {
