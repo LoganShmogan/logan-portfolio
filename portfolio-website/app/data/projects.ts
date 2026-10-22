@@ -94,6 +94,7 @@ export const projects: Project[] = [
     imageUrl: "/kioskSignIn.png",
     techTags: ["Python", "Flask", "Tkinter", "SQLite", "Chart.js"],
     githubLink: "https://github.com/LoganShmogan/kiosk-signin-system",
+    status: "Open source",
     featured: true,
   },
 
