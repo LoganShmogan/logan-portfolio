@@ -36,7 +36,7 @@ export const categories: {
   {
     id: "hardware",
     title: "Hardware & IoT",
-    lead: "Raspberry Pi builds, self-hosted infrastructure and on-device AI.",
+    lead: "Raspberry Pi and ESP32 builds, self-hosted infrastructure and on-device AI.",
   },
   {
     id: "study",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     techTags: ["Next.js", "TypeScript", "CSS Modules", "EmailJS", "Vercel"],
     liveLink: "https://savepoint.co.nz",
     liveLabel: "savepoint.co.nz",
-    status: "Private repo",
+    githubLink: "https://github.com/LoganShmogan/save-point",
     featured: true,
   },
   {
@@ -68,7 +68,7 @@ export const projects: Project[] = [
       "Contract build for a childcare business: a marketing site covering enrolment, gallery and contact handling, live at happyhorizons.nz.",
     imageUrl: "/happyHorizons.png",
     techTags: ["Next.js", "TypeScript", "EmailJS", "Vercel"],
-    githubLink: "https://github.com/LoganShmogan/Happy-Horizons-Website",
+    githubLink: "https://github.com/HappyHorizons-NZ/Happy-Horizons-Website",
     liveLink: "https://happyhorizons.nz",
     liveLabel: "happyhorizons.nz",
     featured: true,
@@ -81,8 +81,8 @@ export const projects: Project[] = [
       "Mobile-first site for a welding and fabrication sole trader. Plain HTML, CSS and JavaScript with no build step: a filterable work gallery with lightbox, a quote form, a full legal page, and caching and security headers on Vercel.",
     imageUrl: "/splitpinEngineering.jpg",
     techTags: ["HTML", "CSS", "JavaScript", "Vercel"],
+    githubLink: "https://github.com/LoganShmogan/splitpin-engineering",
     liveLink: "https://splitpin-engineering.vercel.app",
-    status: "Private repo",
     featured: true,
   },
   {
@@ -100,40 +100,30 @@ export const projects: Project[] = [
 
   // ── Apps & products ──
   {
-    slug: "nz-safety-health",
-    title: "NZ Safety Health App",
+    slug: "jampacked",
+    title: "JamPacked",
     category: "apps",
     description:
-      "Food safety records for NZ and Australian food businesses, built around MPI Food Control Plan rules. Goods-inwards checks with barcode scanning and Open Food Facts auto-fill, temperature logs, audits, automatic corrective actions, expiry alerts, batch recall tracing and a full audit trail. 100% unit test coverage on both app and backend.",
-    placeholderLabel: "Food Safety",
-    techTags: ["Flutter", "Dart", "Convex", "TypeScript", "Vitest"],
-    liveLink: "https://foodsafety.savepoint.co.nz",
-    liveLabel: "Live demo",
-    status: "Private repo",
+      "Goods inwards, stock and food safety records for NZ and Australian food businesses, built around MPI National Programmes 1–3 or a custom programme. Every delivery becomes stock you can rotate, hold, dispatch and recall, with barcode scanning, temperature logs, audits and corrective actions. One account runs several businesses with invited staff. Flutter app, Convex backend and a Next.js website, all with 100% test coverage enforced.",
+    placeholderLabel: "JamPacked",
+    techTags: ["Flutter", "Dart", "Convex", "Next.js", "TypeScript", "Vitest"],
+    githubLink: "https://github.com/LoganShmogan/JamPacked",
+    liveLink: "https://jampacked.co.nz",
+    liveLabel: "jampacked.co.nz",
     featured: true,
   },
   {
-    slug: "alotanotes",
-    title: "AlotaNotes",
+    slug: "quillfin",
+    title: "QuillFin",
     category: "apps",
     description:
-      "Mobile notes and spaced-repetition quiz app. Organise notes into subjects, import .txt, .md, .pdf, .docx or .pptx files, and generate quiz questions with your own OpenAI-compatible or Anthropic API key. A from-scratch Flutter rewrite of Quiz App AI, with 100% test coverage.",
-    placeholderLabel: "AlotaNotes",
-    techTags: ["Flutter", "Dart", "OpenAI / Anthropic APIs", "Docker"],
+      "Mobile-first notes app built around spaced repetition. Turn notes into quiz questions with your own OpenAI-compatible or Anthropic key, import .txt, .md, .pdf, .docx or .pptx files, track practice problems LeetCode-style, and let FSRS (the algorithm Anki uses) bring each item back before you forget it. Started as Quiz App AI, a Python desktop app, then rewritten from scratch in Flutter as AlotaNotes; now adding accounts, offline-first sync and a Next.js web app. 100% test coverage.",
+    placeholderLabel: "QuillFin",
+    techTags: ["Flutter", "Dart", "Convex", "Clerk", "Next.js", "FSRS"],
+    githubLink: "https://github.com/LoganShmogan/QuillFin",
     liveLink: "https://alotanotes.savepoint.co.nz",
     liveLabel: "Live demo",
-    status: "Private repo",
-    featured: true,
-  },
-  {
-    slug: "quiz-app-ai",
-    title: "Quiz App AI",
-    category: "apps",
-    description:
-      "Desktop notebook that quizzes you on your own notes. Generates questions with your own AI key, schedules reviews with spaced repetition, and cross-links related notes with local keyword matching. GitHub Actions builds single-file Windows and Linux executables on every release.",
-    placeholderLabel: "Quiz App AI",
-    techTags: ["Python", "Tkinter", "SQLite", "PyInstaller", "GitHub Actions"],
-    githubLink: "https://github.com/LoganShmogan/Quiz-app-Ai",
+    status: "In progress",
     featured: true,
   },
   {
@@ -158,6 +148,28 @@ export const projects: Project[] = [
     githubLink: "https://github.com/jamesbot78/lifestyle-app",
     liveLink: "https://lifestyle-app-omega.vercel.app",
     status: "Collaboration",
+  },
+  {
+    slug: "project-hub",
+    title: "Save Point Project Hub",
+    category: "apps",
+    description:
+      "Save Point's internal Discord bot. Each project gets a forum channel that mirrors its GitHub docs as versioned posts, with a pinned feed of commits, PRs, issues and releases. Team uploads come in through slash commands or a docsync CLI whose API only listens on Tailscale, with duplicate detection and GitHub kept as the source of truth.",
+    placeholderLabel: "Project Hub",
+    techTags: ["Go", "Discord API", "GitHub API", "Docker", "Tailscale"],
+    githubLink: "https://github.com/LoganShmogan/savepoint-disc-bot",
+    status: "Internal tool",
+  },
+  {
+    slug: "memeline",
+    title: "MemeLine",
+    category: "apps",
+    description:
+      "A community app for memes: post, vote and discuss, with a timeline showing when each meme took off alongside world events of the time. One Expo codebase for web, iOS and Android. It began as a touchscreen TikTok browser on a Raspberry Pi with the Touch Display 2, in a 3D-printed case I designed, which plays a saved TikTok data export offline.",
+    placeholderLabel: "MemeLine",
+    techTags: ["Expo", "React Native", "TypeScript", "SQLite", "Python", "Raspberry Pi"],
+    githubLink: "https://github.com/LoganShmogan/MemeLine",
+    status: "In progress",
   },
   {
     slug: "nutritrack",
@@ -195,16 +207,6 @@ export const projects: Project[] = [
 
   // ── Hardware & IoT ──
   {
-    slug: "meme-browser",
-    title: "MemeBrowser",
-    category: "hardware",
-    description:
-      "Touchscreen media browser on a Raspberry Pi with the official Touch Display 2, in a 3D-printed case I designed. Imports saved TikToks from a data export, downloads them, and plays everything offline alongside your own photos, videos and notes.",
-    placeholderLabel: "MemeBrowser",
-    techTags: ["Python", "Raspberry Pi", "Tkinter", "libVLC", "SQLite", "3D printing"],
-    status: "Private repo",
-  },
-  {
     slug: "loganserver",
     title: "loganserver",
     category: "hardware",
@@ -213,6 +215,16 @@ export const projects: Project[] = [
     placeholderLabel: "loganserver",
     techTags: ["Ubuntu Server", "Docker Compose", "Caddy", "Cloudflare Tunnel", "Tailscale"],
     status: "Self-hosted",
+  },
+  {
+    slug: "f1-dashboard",
+    title: "F1 Race Dashboard",
+    category: "hardware",
+    description:
+      "Three ESP32-S3 touch screens in matching frames that show live Formula One sessions: standings on the left, a track map with every car moving round it in the middle, and race drama and sound on the right. Each board pulls live timing from OpenF1 over wifi and they talk to each other over ESP-NOW, so a tap on one screen changes another. A gift build, made with a friend who owns the design.",
+    placeholderLabel: "F1 Dashboard",
+    techTags: ["ESP32-S3", "Arduino", "C++", "OpenF1 API", "ESP-NOW"],
+    status: "In progress",
   },
   {
     slug: "in-home-ai",
