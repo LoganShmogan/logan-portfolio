@@ -154,7 +154,7 @@ export const projects: Project[] = [
     title: "Save Point Project Hub",
     category: "apps",
     description:
-      "Save Point's internal Discord bot. Each project gets a forum channel that mirrors its GitHub docs as versioned posts, with a pinned feed of commits, PRs, issues and releases. Team uploads come in through slash commands or a docsync CLI whose API only listens on Tailscale, with duplicate detection and GitHub kept as the source of truth.",
+      "Save Point's Discord bot for project docs. Each project gets a forum channel that mirrors its GitHub docs as versioned posts, with a pinned feed of commits, PRs, issues and releases. A /project command sets up a new forum and starts syncing straight away, and the bot can be added to other servers, each with its own projects, while only the home server can mirror private repos. Team uploads come in through slash commands or a docsync CLI whose API only listens on Tailscale, with duplicate detection and GitHub kept as the source of truth.",
     placeholderLabel: "Project Hub",
     techTags: ["Go", "Discord API", "GitHub API", "Docker", "Tailscale"],
     githubLink: "https://github.com/LoganShmogan/savepoint-disc-bot",
