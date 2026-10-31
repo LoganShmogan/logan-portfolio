@@ -26,7 +26,7 @@
 | Route | What it is |
 |---|---|
 | `/` | Intro, featured projects, Save Point teaser |
-| `/projects` | Every project, filterable by category, with screenshots and links (data in `app/data/projects.ts`) |
+| `/projects` | Every project, grouped by category, with screenshots and links (data in `app/data/projects.ts`) |
 | `/about` | Background and skills |
 | `/save-point` | About Save Point Limited |
 | `/contact` | Contact details |
