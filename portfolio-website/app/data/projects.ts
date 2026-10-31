@@ -86,6 +86,16 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    slug: "asa-sign-in",
+    title: "ASA Sign-In System",
+    category: "client",
+    description:
+      "The production sign-in system for After School Adventures childcare, now at v7.3. A fullscreen Tkinter kiosk on a Windows kiosk PC runs alongside a Flask dashboard reachable over a Cloudflare Tunnel. Admin and staff roles, bulk sign-in from run sheets, staff self-service timesheets, caregiver emails, Excel/PDF/CSV exports with embedded signatures, hashed passwords with lockouts and CSRF protection, full audit logging and 100% test coverage.",
+    placeholderLabel: "ASA Sign-In",
+    techTags: ["Python", "Flask", "Tkinter", "SQLite", "Cloudflare Tunnel", "pytest"],
+    status: "Private",
+  },
+  {
     slug: "kiosk-sign-in",
     title: "Kiosk Sign-In System",
     category: "client",
