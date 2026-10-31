@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Privacy policy, cookie policy, website terms and disclaimer for Logan Young's portfolio, governed by New Zealand law.",
 };
 
-const LAST_UPDATED = "22 October 2026";
+const LAST_UPDATED = "31 October 2026";
 
 const contents = [
   { id: "privacy", label: "Privacy Policy" },
@@ -94,11 +94,12 @@ export default function Legal() {
             </h3>
             <p>
               This website does not use cookies, analytics, advertising or
-              tracking tools. Like all websites, the hosting provider (Vercel,
-              based in the United States) may automatically record basic
-              technical information, such as your IP address, browser type and
-              the pages you requested, in server logs. These logs are used only
-              to keep the site running and secure.
+              tracking tools. The site is hosted on my own server in New Zealand
+              and reaches the internet through Cloudflare (based in the United
+              States). Like all websites, the server and Cloudflare may
+              automatically record basic technical information, such as your IP
+              address, browser type and the pages you requested, in logs. These
+              logs are used only to keep the site running and secure.
             </p>
 
             <h3 className={page.subHeadPart}>1.4 How I use your information</h3>

@@ -38,7 +38,7 @@ There is no backend, database, analytics or tracking. Every page is static.
 
 - **Next.js 16** (App Router) and **React 19**, TypeScript
 - Hand-written **CSS Modules**, using Save Point's brand colours with green as the accent
-- Hosted on **Vercel**. A `Dockerfile` and `docker-compose.yml` are included for self-hosting behind a reverse proxy.
+- Self-hosted on **loganserver**, Logan's Ubuntu home server: a Docker Compose stack behind a local-only Caddy reverse proxy, reached through a **Cloudflare Tunnel**, so no ports are open to the internet.
 
 ## Project layout
 
@@ -55,7 +55,7 @@ logan-portfolio/
 │   │   └── not-found.tsx         # 404 page
 │   ├── lib/utils.ts              # cn() class-merging helper
 │   ├── public/                   # Photos and project screenshots
-│   ├── Dockerfile  docker-compose.yml
+│   ├── Dockerfile  docker-compose.yml   # Production container on loganserver (joins the shared `proxy` network)
 │   ├── next.config.ts  tsconfig.json  eslint.config.mjs  postcss.config.mjs
 │   └── package.json
 ├── LICENSE                       # All rights reserved
@@ -81,6 +81,17 @@ npm run dev      # http://localhost:3000
 | `npm run lint` | ESLint |
 
 No environment variables are needed. If any are added later, put them in `portfolio-website/.env.local`; every `.env*` file is git-ignored.
+
+## Deploying
+
+The live site runs on loganserver:
+
+```sh
+cd portfolio-website
+docker compose up -d --build   # builds the Next.js image and starts the `portfolio` container
+```
+
+The container has no published ports. It joins the external `proxy` Docker network, where the shared Caddy proxy routes `loganportfolio.savepoint.co.nz` to it, and the Cloudflare Tunnel on loganserver carries that hostname in from the internet.
 
 ## Ownership
 
